@@ -1,12 +1,3 @@
 <p id="notice"><%= notice %></p>
 
- <div class="post">
-    <h2><%= @destination.name %></h2>
-    <div class="imagediv">
-      <img class="image" src="<%= @destination.image_url %>" />
-      <%= link_to 'Edit', edit_destination_path(@destination) %> |
-  <%= link_to 'Back', destinations_path %>
-    </div>
-  </div>
-
-
+<%= render "destination" %>

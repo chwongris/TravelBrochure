@@ -13,7 +13,7 @@ class AttractionsController < ApplicationController
   # GET /attractions/1
   # GET /attractions/1.json
   def show
-    @attraction = Attraction.find(params[:id])
+    @attractions = Attraction.find([params[:id]])
 
     respond_to do |format|
       format.html # show.html.erb
