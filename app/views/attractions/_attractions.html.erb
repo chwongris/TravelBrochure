@@ -1,0 +1,19 @@
+
+
+<% @attractions.each do |attraction| %>
+
+
+  <div class="post">
+    <h2><%= attraction.name %></h2>
+    <div class="imagediv">
+      <img class="image" src="<%= attraction.image_url %>" />
+    </div>
+    <div>
+      <%= link_to 'Show', attraction %>
+      <%= link_to 'Edit', edit_attraction_path(attraction) %>
+      <%= link_to 'Delete', attraction, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Map', "http://maps.google.com/?q=#{attraction.latitude},#{attraction.longitude}", {:target =>"_new"} %>
+    </div>
+  </div>
+
+<% end %>

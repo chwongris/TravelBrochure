@@ -1,0 +1,18 @@
+
+
+<% @destinations.each do |destination| %>
+
+
+  <div class="post">
+    <h2><%= destination.name %></h2>
+    <div class="imagediv">
+      <img class="image" src="<%= destination.image_url %>" />
+    </div>
+    <div>
+      <%= link_to 'Show', destination %>
+      <%= link_to 'Edit', edit_destination_path(destination) %>
+      <%= link_to 'Delete', destination, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>
+
+<% end %>
