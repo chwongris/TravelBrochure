@@ -2,7 +2,6 @@
 
 <% @attractions.each do |attraction| %>
 
-
   <div class="post">
     <h2><%= attraction.name %></h2>
     <div class="imagediv">
@@ -14,6 +13,7 @@
       <%= link_to 'Delete', attraction, method: :delete, data: { confirm: 'Are you sure?' } %>
       <%= link_to 'Map', "http://maps.google.com/?q=#{attraction.latitude},#{attraction.longitude}", {:target =>"_new"} %>
     </div>
+
   </div>
 
 <% end %>

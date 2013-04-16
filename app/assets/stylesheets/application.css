@@ -12,6 +12,11 @@
  *= require_tree .
  */
 
+
+h2{
+  margin-top: 40px;
+}
+
 .post{
   float: left;
     margin-left: 10px;
@@ -22,6 +27,11 @@
   width: 300px;
   height: 200px;
 
+}
+
+.attractions{
+ margin-right: 20px; 
+  float:left;
 }
 
 .image{
@@ -36,3 +46,6 @@
 body{
   background-image:url('http://raulmandru.com/wp-content/uploads/2011/10/background_map.jpg')
 }
+
+
+

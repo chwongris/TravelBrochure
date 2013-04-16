@@ -11,7 +11,7 @@
     <div>
       <%= link_to 'Show', destination %>
       <%= link_to 'Edit', edit_destination_path(destination) %>
-      <%= link_to 'Attractions', 'attractions', method: :get, id: "3" %>
+      <%= link_to 'Attractions', attractions_path, method: :get, id: "3" %>
       <%= link_to 'Delete', destination, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
   </div>

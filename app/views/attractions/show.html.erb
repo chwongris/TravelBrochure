@@ -1,2 +1,11 @@
 <p id="notice"><%= notice %></p>
-<%= render "attractions" %>
+<div class="post">
+  <h2><%= @attraction.name %></h2>
+  <div class="imagediv">
+    <img class="image" src="<%= @attraction.image_url %>" />
+
+    <%= link_to 'Edit', edit_attraction_path(@attraction) %> |
+    <%= link_to 'Back', attractions_path %>
+
+  </div>
+</div>

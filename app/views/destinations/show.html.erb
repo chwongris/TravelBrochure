@@ -1,3 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<%= render "destination" %>
+ <div class="post">
+    <h1><%= @destination.name %></h1>
+
+    <div class="imagediv">
+      <img class="image" src="<%= @destination.image_url %>" />
+      <%= link_to 'Edit', edit_destination_path(@destination) %> |
+      <%= link_to 'Back', destinations_path %>
+    </div>
+
+  <h2><%= @destination.name %> Attractions</h2>
+
+    <% @destination.attractions.each do |attraction| %>
+    
+    <div class="attractions">
+    <h3 class="attractiontitle"><%= attraction.name %></h3>
+    <div class="imagediv">
+      <img class="image" src="<%= attraction.image_url %>" />
+    </div>
+    <div>
+      <%= link_to 'Show', attraction %>
+      <%= link_to 'Edit', edit_attraction_path(attraction) %>
+      <%= link_to 'Delete', attraction, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Map', "http://maps.google.com/?q=#{attraction.latitude},#{attraction.longitude}", {:target =>"_new"} %>
+    </div>
+
+  </div>
+
+    <% end %>
+  </div>
+
+
